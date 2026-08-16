@@ -1,0 +1,8 @@
+# dsh-archived-sessions-sidebar bundle patch: inserts the dual-face plugin row
+# into the web profile roster. The node half (exports ".") runs in the host
+# process (the /archived-sidebar/api routes + the system-prompt announcement),
+# and the `dsh.client` declaration in package.json makes the browser half
+# (exports "./client", served at /plugins/<id>/client.js) load in the web GUI.
+- insert:
+    - id: dsh-archived-sessions-sidebar
+      name: 'dsh-archived-sessions-sidebar'
